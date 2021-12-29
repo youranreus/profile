@@ -1,7 +1,7 @@
 .sider {
-    width: 15%;
+    width: 30%;
     height: 100vh;
-    background: #f4f5f5;
+    background: RGBA(250, 250, 250, 1);
 }
 
 .blocks {
