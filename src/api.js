@@ -9,4 +9,6 @@ const api = axios.create({
     timeout: 2000
 });
 
+export const getProfile = () => api.get('X/getProfileData')
+
 export default api;
