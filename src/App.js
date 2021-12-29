@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {Layout} from "@douyinfe/semi-ui";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {Header, Footer, Content, Sider} = Layout;
+    return (
+        <Layout>
+            <Sider className={"sider blocks"}>
+                Sidebar
+            </Sider>
+            <Layout>
+                <Header className={"blocks"}>
+                    Header
+                </Header>
+                <Content className={"blocks"}>
+                    Content
+                </Content>
+                <Footer className={"blocks"}>
+                    Footer
+                </Footer>
+            </Layout>
+        </Layout>
+    );
 }
 
 export default App;
