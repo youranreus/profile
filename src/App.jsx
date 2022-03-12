@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import {Layout} from "@douyinfe/semi-ui";
 import {getProfile} from "./api";
+import PSider from "./components/PSider";
 
 class App extends React.Component {
     constructor(props) {
@@ -25,8 +26,8 @@ class App extends React.Component {
         const {Header, Footer, Content, Sider} = Layout;
         return (
             <Layout>
-                <Sider className={"sider blocks"}>
-                    Sidebar
+                <Sider className={"sider-wrap"}>
+                    <PSider/>
                 </Sider>
                 <Layout>
                     <Header className={"blocks"}>

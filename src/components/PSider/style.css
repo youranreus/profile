@@ -1,0 +1,8 @@
+.sider {
+    height: 100vh;
+    background: RGBA(250, 250, 250, 1);
+}
+
+.sider-content {
+    padding: 5rem;
+}

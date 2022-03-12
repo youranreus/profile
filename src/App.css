@@ -1,9 +1,8 @@
-.sider {
-    width: 30%;
-    height: 100vh;
-    background: RGBA(250, 250, 250, 1);
-}
-
 .blocks {
     padding: 1.5rem;
+}
+
+.sider-wrap {
+    min-width: 20rem;
+    max-width: 25rem;
 }
