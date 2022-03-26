@@ -3,10 +3,24 @@
   overflow: hidden;
 
   .block {
-    background: rgba(var(--semi-grey-0), 1);
-    border-radius: var(--semi-border-radius-large);
-    border: 1px solid var(--semi-color-border);
+    padding: 1rem;
     overflow: hidden;
+  }
+
+  .basic {
+    h2 {
+      font-weight: 200;
+      margin-bottom: 0;
+
+      span {
+        letter-spacing: .3rem;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: var(--semi-color-text-3)
+    }
   }
 }
 

@@ -15,6 +15,7 @@ export default function App() {
     useEffect(() => {
         getProfile().then(res => {
             setProfile(res.data)
+            console.log(res.data)
             setLoading(false)
         })
         axios.get('https://v1.hitokoto.cn/?c=k').then(res => {
