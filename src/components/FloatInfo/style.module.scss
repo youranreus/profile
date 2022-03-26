@@ -1,4 +1,12 @@
 .Info {
   margin: 1.5rem;
-  background: #fafafa;
+  overflow: hidden;
+
+  .block {
+    background: rgba(var(--semi-grey-0), 1);
+    border-radius: var(--semi-border-radius-large);
+    border: 1px solid var(--semi-color-border);
+    overflow: hidden;
+  }
 }
+

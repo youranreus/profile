@@ -1,10 +1,15 @@
 import style from './style.module.scss'
+import { Avatar } from '@douyinfe/semi-ui';
 
 function FloatInfo(props) {
 
     return (
         <div className={style.Info}>
-            <h2>侧边</h2>
+
+            <div className={style.block}>
+                <Avatar></Avatar>
+            </div>
+
         </div>
     )
 }
