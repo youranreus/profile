@@ -9,7 +9,7 @@
   left: 0;
   background: #fff;
   z-index: 99;
-  transition: top 2s ease, opacity .5s ease;
+  transition: top 2s linear, opacity .5s linear;
 
   p {
     opacity: .2;

@@ -5,7 +5,7 @@ export default function Loading(props) {
     return (
         <div className={[style.loading, (!props.loading ? style['fade-out'] : '')].join(' ')}>
             <div>
-                <p>少女祈祷中</p>
+                <p>{props.loading ? '少女祈祷中' : '锵锵锵~'}</p>
             </div>
 
             <div className={style.hitokoto}>
