@@ -1,48 +1,29 @@
-import React from "react";
-import './App.css';
-import {Layout} from "@douyinfe/semi-ui";
+import React, {useEffect, useState} from "react";
+import { Col, Row } from '@douyinfe/semi-ui';
 import {getProfile} from "./api";
-import PSider from "./components/PSider";
+import './App.css';
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            profileData: {}
-        }
-    }
+export default function App() {
 
-    componentDidMount() {
+    const [profile, setProfile] = useState({})
+
+    useEffect(() => {
         getProfile().then(res => {
-            this.setState({
-                getProfile: res.data
-            })
-        }).catch(error => {
-            console.log(error);
+            setProfile(res.data)
+            console.log(res.data)
         })
-    }
+    }, [])
 
-    render() {
-        const {Header, Footer, Content, Sider} = Layout;
-        return (
-            <Layout>
-                <Sider className={"sider-wrap"}>
-                    <PSider/>
-                </Sider>
-                <Layout>
-                    <Header className={"blocks"}>
-                        Header
-                    </Header>
-                    <Content className={"blocks"}>
-                        Content
-                    </Content>
-                    <Footer className={"blocks"}>
-                        Footer
-                    </Footer>
-                </Layout>
-            </Layout>
-        );
-    }
+    return (
+        <div id="main">
+            <Row>
+                <Col span={8}>
+                    <h2>侧边栏</h2>
+                </Col>
+                <Col span={16}>
+                    <h2>main</h2>
+                </Col>
+            </Row>
+        </div>
+    )
 }
-
-export default App;

@@ -1,8 +1,8 @@
-.blocks {
-    padding: 1.5rem;
+:root {
+    font-size: 18px;
 }
 
-.sider-wrap {
-    min-width: 20rem;
-    max-width: 25rem;
+#main {
+    width: 1200px;
+    margin: 3rem auto;
 }
