@@ -21,6 +21,8 @@ export default function App() {
         axios.get('https://v1.hitokoto.cn/?c=k').then(res => {
             setSen(res.data.hitokoto)
         })
+
+        document.body.setAttribute('theme-mode', 'dark')
     }, [])
 
     return (

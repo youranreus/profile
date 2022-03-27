@@ -38,10 +38,13 @@ function FloatInfo(props) {
                     <Space wrap>
                         {
                             tags.map(item => (<Tag size={"large"} color={item.color || ''}
-                                                   style={item.style || {}}>{item.title}</Tag>))
+                                                   style={item.style || {}} key={item.title}>{item.title}</Tag>))
                         }
                     </Space>
                 </div>
+            </div>
+            <div className={style.block}>
+
             </div>
         </div>
     )

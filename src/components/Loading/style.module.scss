@@ -7,7 +7,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
+  background: var(--semi-color-bg-0);
   z-index: 99;
   transition: top 2s linear, opacity .5s linear;
 
