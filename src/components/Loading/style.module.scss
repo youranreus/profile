@@ -29,6 +29,7 @@
   &.fade-out {
     opacity: 0.1;
     top: 100vh;
+    background: RGBA(255, 255, 255, 0);
     .hitokoto {
       display: none;
     }
