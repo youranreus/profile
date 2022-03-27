@@ -21,6 +21,10 @@ function FloatInfo(props) {
         {
             title: '音乐',
             color: 'green'
+        },
+        {
+            title: '明日方舟',
+            color: 'white'
         }
     ]
 
@@ -33,7 +37,8 @@ function FloatInfo(props) {
                 <div style={{marginTop: "1rem"}}>
                     <Space wrap>
                         {
-                            tags.map(item => (<Tag size={"large"} color={item.color}>{item.title}</Tag>))
+                            tags.map(item => (<Tag size={"large"} color={item.color || ''}
+                                                   style={item.style || {}}>{item.title}</Tag>))
                         }
                     </Space>
                 </div>
