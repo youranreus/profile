@@ -27,30 +27,60 @@ export default function App() {
 
     const skills = [
         {
-            title: 'HTML',
-            percent: '70',
-            color: 'rgba(var(--semi-blue-6), 1)'
+            title: 'Frontend Skills',
+            skills: [
+                {
+                    title: 'HTML',
+                    percent: '70',
+                    color: 'rgba(var(--semi-blue-6), 1)'
+                },
+                {
+                    title: 'CSS',
+                    percent: '80',
+                    color: ''
+                },
+                {
+                    title: 'JS',
+                    percent: '60',
+                    color: 'rgba(var(--semi-pink-4), 1)'
+                },
+                {
+                    title: 'Git',
+                    percent: '70',
+                    color: 'rgba(var(--semi-blue-6), 1)'
+                },
+                {
+                    title: 'PHP',
+                    percent: '50',
+                    color: ''
+                },
+            ]
         },
         {
-            title: 'CSS',
-            percent: '80',
-            color: ''
-        },
-        {
-            title: 'JS',
-            percent: '60',
-            color: 'rgba(var(--semi-pink-4), 1)'
-        },
-        {
-            title: 'Git',
-            percent: '70',
-            color: 'rgba(var(--semi-blue-6), 1)'
-        },
-        {
-            title: 'PHP',
-            percent: '50',
-            color: ''
-        },
+            title: 'Other Skills',
+            skills: [
+                {
+                    title: 'Work With Team',
+                    percent: '80',
+                    color: ''
+                },
+                {
+                    title: 'Design',
+                    percent: '30',
+                    color: ''
+                },
+                {
+                    title: 'Communication',
+                    percent: '70',
+                    color: ''
+                },
+                {
+                    title: 'Self-control',
+                    percent: '70',
+                    color: 'rgba(var(--semi-blue-6), 1)'
+                }
+            ]
+        }
     ]
 
     return (
@@ -67,33 +97,38 @@ export default function App() {
                             <p>{profile ? profile.about.README.content : ''}</p>
                         </div>
 
-                        <div className="skill">
-                            <h2>SKill</h2>
-                            <div className={"skill-list"}>
-                                <Row>
-                                    <Col span={12}>
-                                        {
-                                            skills.map((item, index) => index % 2 === 0 ? (
-                                                <div className="skill-item" key={item.title}>
-                                                    <span>{item.title}</span>
-                                                    <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
-                                                </div>
-                                            ) : (""))
-                                        }
-                                    </Col>
-                                    <Col span={12}>
-                                        {
-                                            skills.map((item, index) => index % 2 !== 0 ? (
-                                                <div className="skill-item" key={item.title}>
-                                                    <span>{item.title}</span>
-                                                    <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
-                                                </div>
-                                            ) : (""))
-                                        }
-                                    </Col>
-                                </Row>
-                            </div>
-                        </div>
+                        {
+                            skills.map(item => (
+                                <div className="skill">
+                                    <h2>{item.title}</h2>
+                                    <div className={"skill-list"}>
+                                        <Row>
+                                            <Col span={12}>
+                                                {
+                                                    item.skills.map((item, index) => index % 2 === 0 ? (
+                                                        <div className="skill-item" key={item.title}>
+                                                            <span>{item.title}</span>
+                                                            <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
+                                                        </div>
+                                                    ) : (""))
+                                                }
+                                            </Col>
+                                            <Col span={12}>
+                                                {
+                                                    item.skills.map((item, index) => index % 2 !== 0 ? (
+                                                        <div className="skill-item" key={item.title}>
+                                                            <span>{item.title}</span>
+                                                            <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
+                                                        </div>
+                                                    ) : (""))
+                                                }
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </div>
+                            ))
+                        }
+
                     </div>
                 </Col>
             </Row>
