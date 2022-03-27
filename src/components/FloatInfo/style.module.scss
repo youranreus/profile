@@ -25,5 +25,38 @@
       color: var(--semi-color-text-3)
     }
   }
+
+  .other {
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 0.875rem;
+        margin-inline: 2rem;
+        border-bottom: 2px dashed var(--semi-color-border);
+
+        body[theme-mode=dark] &{
+          border-bottom: none;
+        }
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+
+        .icon {
+          position: relative;
+          top: 6px;
+        }
+
+        span.text {
+          margin-left: 1rem
+        }
+      }
+    }
+  }
 }
 
