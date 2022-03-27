@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {Col, Row} from '@douyinfe/semi-ui';
+import {Col, Row, Progress} from '@douyinfe/semi-ui';
 import FloatInfo from "./components/FloatInfo";
 import Loading from "./components/Loading";
 import {getProfile} from "./api";
-import './App.css';
+import './App.scss';
 import axios from "axios";
 
 export default function App() {
@@ -22,8 +22,36 @@ export default function App() {
             setSen(res.data.hitokoto)
         })
 
-        document.body.setAttribute('theme-mode', 'dark')
+        // document.body.setAttribute('theme-mode', 'dark')
     }, [])
+
+    const skills = [
+        {
+            title: 'HTML',
+            percent: '70',
+            color: 'rgba(var(--semi-blue-6), 1)'
+        },
+        {
+            title: 'CSS',
+            percent: '80',
+            color: ''
+        },
+        {
+            title: 'JS',
+            percent: '60',
+            color: 'rgba(var(--semi-pink-4), 1)'
+        },
+        {
+            title: 'Git',
+            percent: '70',
+            color: 'rgba(var(--semi-blue-6), 1)'
+        },
+        {
+            title: 'PHP',
+            percent: '50',
+            color: ''
+        },
+    ]
 
     return (
         <div id="main">
@@ -33,7 +61,40 @@ export default function App() {
                     <FloatInfo profile={profile}/>
                 </Col>
                 <Col span={16}>
-                    <h2>main</h2>
+                    <div className={'content'}>
+                        <h1>README</h1>
+                        <div className="readme">
+                            <p>{profile ? profile.about.README.content : ''}</p>
+                        </div>
+
+                        <div className="skill">
+                            <h2>SKill</h2>
+                            <div className={"skill-list"}>
+                                <Row>
+                                    <Col span={12}>
+                                        {
+                                            skills.map((item, index) => index % 2 === 0 ? (
+                                                <div className="skill-item" key={item.title}>
+                                                    <span>{item.title}</span>
+                                                    <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
+                                                </div>
+                                            ) : (""))
+                                        }
+                                    </Col>
+                                    <Col span={12}>
+                                        {
+                                            skills.map((item, index) => index % 2 !== 0 ? (
+                                                <div className="skill-item" key={item.title}>
+                                                    <span>{item.title}</span>
+                                                    <Progress percent={item.percent} showInfo stroke={item.color || ""}/>
+                                                </div>
+                                            ) : (""))
+                                        }
+                                    </Col>
+                                </Row>
+                            </div>
+                        </div>
+                    </div>
                 </Col>
             </Row>
         </div>
