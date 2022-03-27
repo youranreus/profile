@@ -22,7 +22,7 @@ export default function App() {
             setSen(res.data.hitokoto)
         })
 
-        // document.body.setAttribute('theme-mode', 'dark')
+        document.body.setAttribute('theme-mode', 'dark')
     }, [])
 
     const skills = [
