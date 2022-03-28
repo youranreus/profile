@@ -6,6 +6,7 @@ import ProjectItem from "./components/ProjectItem";
 import {getProfile} from "./api";
 import './App.scss';
 import axios from "axios";
+import DarkModeSwitcher from "./components/DarkModeSwitcher";
 
 export default function App() {
 
@@ -16,14 +17,11 @@ export default function App() {
     useEffect(() => {
         getProfile().then(res => {
             setProfile(res.data)
-            console.log(res.data)
             setLoading(false)
         })
         axios.get('https://v1.hitokoto.cn/?c=k').then(res => {
             setSen(res.data.hitokoto)
         })
-
-        document.body.setAttribute('theme-mode', 'dark')
     }, [])
 
     const skills = [
@@ -113,6 +111,7 @@ export default function App() {
 
     return (
         <div id="main">
+            <DarkModeSwitcher/>
             <Loading sentence={sentence} loading={loading}/>
             <Row>
                 <Col span={8}>

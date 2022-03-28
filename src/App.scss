@@ -10,6 +10,7 @@
 
 body {
     background: var(--semi-color-bg-0);
+    transition: background-color .5s ease;
 
     &::-webkit-scrollbar {
         background: var(--semi-color-bg-0);
