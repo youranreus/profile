@@ -109,6 +109,15 @@ export default function App() {
         }
     ]
 
+    const userInfo = {
+        username: 'youranreus',
+        desc: `零二年生少年🧑，坐标深圳技术大学🏫<br>a ${getGrade(2020)} who majors in CS<br> 爱好是 { 踢球⚽ / 做饭👨‍🍳 / 发呆😶 }<br>平时喜欢做计划，在意仪式感`
+    }
+
+    function getGrade(enter) {
+        return [0, 'fresh man', 'sophomore', 'junior', 'senior'][new Date().getFullYear() - enter]
+    }
+
     return (
         <div id="main">
             <DarkModeSwitcher/>
@@ -121,7 +130,7 @@ export default function App() {
                     <div className={'content'}>
                         <h1>README</h1>
                         <div className="readme">
-                            <p>{profile ? profile.about.README.content : ''}</p>
+                            <p dangerouslySetInnerHTML={{__html: userInfo.desc}}></p>
                         </div>
 
                         {

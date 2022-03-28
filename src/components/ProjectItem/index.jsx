@@ -15,7 +15,6 @@ export default function ProjectItem(props) {
     useEffect(() => {
         axios.get('https://api.github.com/repos/' + github).then(res => {
             setGhData(res.data)
-            console.log(res.data)
         })
     }, [])
 
