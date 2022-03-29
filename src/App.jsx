@@ -14,15 +14,16 @@ export default function App() {
     const [sentence, setSen] = useState('')
     const {skills, projects, userInfo} = UserData
 
+    userInfo.desc = userInfo.desc.replace(/\${getGrade\((.*?)\)}/g, (v, p1) => {
+        return getGrade(parseInt(p1))
+    })
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
         }, 1000)
         axios.get('https://v1.hitokoto.cn/?c=k').then(res => {
             setSen(res.data.hitokoto)
-        })
-        userInfo.desc = userInfo.desc.replace(/\${getGrade\((.*?)\)}/g, (v, p1) => {
-            return getGrade(parseInt(p1))
         })
     }, [])
 
