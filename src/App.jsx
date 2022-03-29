@@ -12,6 +12,7 @@ export default function App() {
 
     const [loading, setLoading] = useState(true)
     const [sentence, setSen] = useState('')
+    const {skills, projects, userInfo} = UserData
 
     useEffect(() => {
         setTimeout(() => {
@@ -20,9 +21,10 @@ export default function App() {
         axios.get('https://v1.hitokoto.cn/?c=k').then(res => {
             setSen(res.data.hitokoto)
         })
+        userInfo.desc = userInfo.desc.replace(/\${getGrade\((.*?)\)}/g, (v, p1) => {
+            return getGrade(parseInt(p1))
+        })
     }, [])
-
-    const {skills, projects, userInfo} = UserData
 
     function getGrade(enter) {
         return [0, 'fresh man', 'sophomore', 'junior', 'senior'][new Date().getFullYear() - enter]
