@@ -1,0 +1,112 @@
+{
+  "userInfo": {
+    "username": "youranreus",
+    "desc": "零二年生少年🧑，坐标深圳技术大学🏫<br>a ${getGrade(2020)} who majors in CS<br> 爱好是 { 踢球⚽ / 做饭👨‍🍳 / 发呆😶 }<br>平时喜欢做计划，在意仪式感",
+    "avatar": "https://sdn.geekzu.org/avatar/87e0f8d2f0f70987061cec6376cb7f97?s=200&r=G&d=",
+    "tags": [
+      {
+        "title": "前端",
+        "color": "blue"
+      },
+      {
+        "title": "足球",
+        "color": "violet"
+      },
+      {
+        "title": "料理",
+        "color": "teal"
+      },
+      {
+        "title": "音乐",
+        "color": "green"
+      },
+      {
+        "title": "明日方舟",
+        "color": "white"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "title": "Programming",
+      "skills": [
+        {
+          "title": "HTML",
+          "percent": 70,
+          "color": "rgba(var(--semi-blue-6), 1)"
+        },
+        {
+          "title": "CSS",
+          "percent": 80,
+          "color": ""
+        },
+        {
+          "title": "JS",
+          "percent": 60,
+          "color": "rgba(var(--semi-pink-4), 1)"
+        },
+        {
+          "title": "Git",
+          "percent": 70,
+          "color": "rgba(var(--semi-blue-6), 1)"
+        },
+        {
+          "title": "PHP",
+          "percent": 50,
+          "color": ""
+        }
+      ]
+    },
+    {
+      "title": "Other",
+      "skills": [
+        {
+          "title": "Work With Team",
+          "percent": 80,
+          "color": ""
+        },
+        {
+          "title": "Design",
+          "percent": 30,
+          "color": ""
+        },
+        {
+          "title": "Communication",
+          "percent": 70,
+          "color": ""
+        },
+        {
+          "title": "Self-control",
+          "percent": 70,
+          "color": "rgba(var(--semi-blue-6), 1)"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "G",
+      "desc": "a graceful typecho theme",
+      "github": "youranreus/G",
+      "url": "https://blog.mitsuha.space"
+    },
+    {
+      "title": "note",
+      "desc": "季悠然の便签",
+      "github": "youranreus/note",
+      "url": "https://note.imouto.tech"
+    },
+    {
+      "title": "Homepod",
+      "desc": "个人练手自制的PHP框架",
+      "github": "youranreus/Homepod",
+      "url": ""
+    },
+    {
+      "title": "博客新手村",
+      "desc": "为博客小白搭建的从零开始的入门教程网站",
+      "github": "ImoutoTech/tutorial",
+      "url": "https://imouto.tech"
+    }
+  ]
+}
