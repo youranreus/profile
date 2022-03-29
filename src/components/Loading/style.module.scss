@@ -29,9 +29,13 @@
   &.fade-out {
     opacity: 0.1;
     top: 100vh;
-    background: RGBA(255, 255, 255, 0);
+    background: rgba(var(--semi-white), .3);
     .hitokoto {
       display: none;
     }
+  }
+
+  body[theme-mode=dark] &.fade-out {
+    background: rgba(22, 22, 26, .3);
   }
 }
