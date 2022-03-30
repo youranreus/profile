@@ -12,7 +12,7 @@ function FloatInfo(props) {
         <div className={style.Info}>
             <div className={[style.block, style.basic].join(' ')} style={{textAlign: "center"}}>
                 <Avatar src={props.profile.avatar} size={"extra-large"}/>
-                <h2><span>曾仲</span>方</h2>
+                <h2><span>季悠</span>然</h2>
                 <p>{props.profile.username}</p>
                 <div style={{marginTop: "1rem"}}>
                     <Space wrap>
