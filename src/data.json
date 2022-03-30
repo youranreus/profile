@@ -108,5 +108,45 @@
       "github": "ImoutoTech/tutorial",
       "url": "https://imouto.tech"
     }
+  ],
+  "experiences": [
+    {
+      "title": "Working Experiences",
+      "exp": [
+        {
+          "content": "飞书一面挂",
+          "extra": "大二还是太年轻",
+          "time": "2022-3-24",
+          "type": "error",
+          "color": ""
+        },
+        {
+          "content": "找实习中",
+          "extra": "",
+          "time": "now",
+          "type": "ongoing",
+          "color": ""
+        }
+      ]
+    },
+    {
+      "title": "Honors",
+      "exp": [
+        {
+          "content": "团体特等奖",
+          "extra": "2018年广东省中小学生创客大赛",
+          "time": "2018.12.14-12.16",
+          "type": "success",
+          "color": ""
+        },
+        {
+          "content": "团体三等奖",
+          "extra": "广东省双融双创杯创客马拉松",
+          "time": "2019.5.10-5.12",
+          "type": "",
+          "color": "pink"
+        }
+      ]
+    }
   ]
 }

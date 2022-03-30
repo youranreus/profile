@@ -3,6 +3,7 @@ import {Col, Row, Progress} from '@douyinfe/semi-ui';
 import FloatInfo from "./components/FloatInfo";
 import Loading from "./components/Loading";
 import ProjectItem from "./components/ProjectItem";
+import Experience from "./components/Experience";
 import UserData from './data.json'
 import './App.scss';
 import axios from "axios";
@@ -12,7 +13,7 @@ export default function App() {
 
     const [loading, setLoading] = useState(true)
     const [sentence, setSen] = useState('')
-    const {skills, projects, userInfo} = UserData
+    const {skills, projects, userInfo, experiences} = UserData
 
     userInfo.desc = userInfo.desc.replace(/\${getGrade\((.*?)\)}/g, (v, p1) => {
         return getGrade(parseInt(p1))
@@ -89,6 +90,12 @@ export default function App() {
                                                      github={item.github}/>))
                                 }
                             </div>
+                        </div>
+
+                        <div className="experience">
+                            {
+                                experiences.map(item => (<Experience data={item} key={item.title}/>))
+                            }
                         </div>
                     </div>
                 </Col>
