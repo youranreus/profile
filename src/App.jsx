@@ -8,6 +8,7 @@ import UserData from './data.json'
 import './App.scss';
 import axios from "axios";
 import DarkModeSwitcher from "./components/DarkModeSwitcher";
+import {IconGithubLogo, IconMail} from '@douyinfe/semi-icons';
 
 export default function App() {
 
@@ -96,6 +97,12 @@ export default function App() {
                             {
                                 experiences.map(item => (<Experience data={item} key={item.title}/>))
                             }
+                        </div>
+
+                        <div className="contact">
+                            <h2>Contact</h2>
+                            <p>你可以通过以下方式找到我</p>
+                            <p><IconMail size={"inherit"} /> youranreus@qq.com | <IconGithubLogo size={"inherit"} /> @youranreus</p>
                         </div>
                     </div>
                 </Col>
