@@ -95,3 +95,27 @@ body {
   }
 }
 
+footer {
+  text-align: right;
+  color: var(--semi-color-text-2);
+  background: var(--semi-color-bg-1);
+  padding: 1rem;
+  position: relative;
+  font-weight: 500;
+
+  p {
+    margin: 0;
+  }
+
+  span.beian {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: var(--semi-color-text-2);
+
+    a {
+      color: var(--semi-color-text-2);
+    }
+  }
+}
+
