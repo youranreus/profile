@@ -75,7 +75,7 @@ body {
 
         .skill-item {
           margin-bottom: 1rem;
-          width: 90%;
+          width: 95%;
 
           span {
             display: block;
@@ -132,6 +132,15 @@ footer {
 
   #main {
     width: 95%;
+    .content {
+      .skill {
+        .skill-list {
+          .skill-item {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 
   footer {
