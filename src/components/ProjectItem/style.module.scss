@@ -20,7 +20,10 @@
   }
 
   h4, p {
-    margin: 0
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   h4 {
@@ -43,6 +46,29 @@
       font-size: 0.625rem;
       color: var(--semi-color-text-1);
       font-weight: 600;
+    }
+
+    .btn {
+
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .item {
+    padding: 10px 10px 4px 10px;
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.875rem;
+    }
+    .footer {
+      .btn {
+        display: none;
+      }
     }
   }
 }

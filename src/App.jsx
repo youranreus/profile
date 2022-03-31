@@ -40,10 +40,10 @@ export default function App() {
                 <DarkModeSwitcher/>
                 <Loading sentence={sentence} loading={loading}/>
                 <Row>
-                    <Col span={8}>
+                    <Col xs={0} sm={8} md={8} lg={8} xl={8} xxl={8}>
                         <FloatInfo profile={userInfo}/>
                     </Col>
-                    <Col span={16}>
+                    <Col xs={24} sm={16} md={16} lg={16} xl={16} xxl={16}>
                         <div className={'content'}>
                             <h1>README</h1>
                             <div className="readme">

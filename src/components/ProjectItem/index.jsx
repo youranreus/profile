@@ -29,24 +29,26 @@ export default function ProjectItem(props) {
             <p>{desc || ghData.description}</p>
             <div className={style.footer}>
                 <Row>
-                    <Col span={12}>
+                    <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={12}>
                         <div className={style.meta}>
                             <span>{ghData ? ghData.language : 'loading'}</span>
                             {ghData ? <span> · {ghData.stargazers_count} stars</span> : ''}
                         </div>
 
                     </Col>
-                    <Col span={12} style={{textAlign: 'right', position: "relative", zIndex: "3"}}>
-                        {
-                            github ? (<Text onClick={(e) => {
-                                e.stopPropagation()
-                            }} link={{href: 'https://github.com/' + github, target: "_blank"}}>Github</Text>) : ""
-                        }
-                        {
-                            url ? (<Text onClick={(e) => {
-                                e.stopPropagation()
-                            }} link={{href: url, target: "_blank"}} style={{marginLeft: 10}}>访问</Text>) : ""
-                        }
+                    <Col xs={0} sm={12} md={12} lg={12} xl={12} xxl={12} style={{textAlign: 'right', position: "relative", zIndex: "3"}}>
+                        <div className={style.btn}>
+                            {
+                                github ? (<Text onClick={(e) => {
+                                    e.stopPropagation()
+                                }} link={{href: 'https://github.com/' + github, target: "_blank"}}>Github</Text>) : ""
+                            }
+                            {
+                                url ? (<Text onClick={(e) => {
+                                    e.stopPropagation()
+                                }} link={{href: url, target: "_blank"}} style={{marginLeft: 10}}>访问</Text>) : ""
+                            }
+                        </div>
                     </Col>
                 </Row>
             </div>
