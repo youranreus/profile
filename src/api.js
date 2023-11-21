@@ -2,13 +2,7 @@
  * @author 季悠然
  * @date 2021-12-29
  */
-import axios from "axios";
+import axios from 'axios'
 
-const api = axios.create({
-    baseURL: 'https://i.exia.xyz/',
-    timeout: 2000
-});
-
-export const getProfile = () => api.get('X/getProfileData')
-
-export default api;
+export const getProfile = () =>
+  axios.get('https://mdb.exia.xyz:21723/config/get?slug=profile')
