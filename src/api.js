@@ -5,4 +5,4 @@
 import axios from 'axios'
 
 export const getProfile = () =>
-  axios.get('https://mdb.exia.xyz:21723/config/get?slug=profile')
+  axios.get('https://mdb.exia.xyz/config/get?slug=profile')
